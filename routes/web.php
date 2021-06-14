@@ -28,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/',[App\Http\Controllers\Api\Product\ProductController::class, 'view']);
+Route::get('/',[App\Http\Controllers\Api\Front\FrontController::class, 'index']);
 Route::get('/product/show/{id}',[App\Http\Controllers\Api\Product\ProductController::class, 'show']);
 
 Route::resource('/cart','App\Http\Controllers\Api\Cart\CartController',[

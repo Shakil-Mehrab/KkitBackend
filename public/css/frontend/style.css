@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+/********** START COMMON CLASS *************/
+.brand_color{
+    color: #ED2024;
+}
+.btn_color{
+background: #ED2024;
+border: none;
+}
+.btn-danger{
+background: #ED2024 !important;
+}
+/********** END OF COMMON CLASS *************/
+/********** START OF HEADER*************/
+
+nav {
+   min-height: 80px;
+   background: #F5F6FA;
+
+}
+nav .dropdown_item{
+    /* border:1px solid #e0d8d8; */
+    position:absolute;
+    top:50px;
+    left:0px;
+    z-index: 9999;
+    background-image: linear-gradient(#F5F6FA, white);
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+}
+nav .nav-item:hover .dropdown_item{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(10px);
+    transition: 1s;
+}
+.nav_ul li a span{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.navbar {
+background: #000;
+padding: 1rem 8rem;
+z-index: 9999;
+}
+.navbar .navbar-brand {
+font-size: 1.4rem;
+font-weight: 700;
+}
+.slider_size {
+width: 1000px;
+height: 400px;
+}
+#navbarSupportedContent > ul > li:nth-child(n) > a {
+color: #fff;
+font-size: 1.1rem;
+padding: 0 0.8rem;
+}
+#navbarSupportedContent > ul > li:nth-child(n) > a:hover {
+color: #00bf6d;
+}
+#navbarSupportedContent button {
+background: #00bf6d;
+font-weight: 600;
+padding: 0.4rem 1.4rem;
+border-radius: 30px;
+}
+#navbarSupportedContent button:hover {
+background: #fff;
+}
+.mid {
+width: 100%;
+height: 85vh;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+}
+.mid video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+}
+.hero {
+position: relative;
+}
+.mid .hero p {
+width: 55%;
+font-size: 1.3rem;
+letter-spacing: 0.2px;
+}
+.mid .hero a{
+background: #00bf6d;
+font-weight: 600;
+padding: 0.6rem 1.5rem;
+border-radius: 30px;
+text-decoration: none;
+}
+.mid .hero a:hover {
+background: #fff;
+}*/
+/****************** END OF HEADER **************/
+/********** START OF ABOUT SECTION *************/
+#about {
+background: #F5F6FA;
+/*background: #C8BFE7;*/
+padding-top: 2rem;
+padding-bottom: 2rem;
+}
+#about h2{
+text-align: center;
+justify-content: center;
+}
+#about h3{
+padding-top: 10px;
+}
+#about p{
+text-align: justify;
+}
+/********** END OF ABOUT SECTION *************/
+/********** START OF COURSE SECTION *************/
+.course{
+background: #fff;
+}
+.course h2{
+color: #ED2024;
+text-align: center;
+font-weight: bold;
+padding-top: 25px;
+}
+.course .course_p{
+text-align: center;
+font-size: 18px;
+font-weight: 400;
+}
+
+/********** END OF COURSE SECTION *****************/
+/********** START OF SERVICE SECTION *************/
+.service{
+background: #F5F6FA;
+/*padding-left: 80px;*/
+}
+.service h2{
+color: #ED2024;
+text-align: center;
+font-weight: bold;
+padding-top: 25px;
+}
+
+.service .card_size{
+    min-height: 600px ;
+}
+.service .service_p{
+text-align: center;
+font-size: 18px;
+font-weight: 400;
+}
+
+.service ul li a{
+color: #000;
+font-weight: 500;
+}
+.card-body{
+    position: relative;
+}
+
+.service_detail a{
+    position: absolute;
+    bottom: 25px;
+}
+/********** END OF SERVICE SECTION *****************/
+/********** START OF FACILITY SECTION *************/
+.facility{
+background: #fff;
+}
+.facility h2{
+color: #ED2024;
+font-weight: bold;
+padding: 15px 0;
+text-align: center;
+justify-content: center;
+font-weight: 600;
+}
+
+.facility .card_size{
+    min-height: 450px ;
+    max-height: 450px ;
+    overflow: hidden;
+}
+
+.faci_img {
+width: 100%;
+height: 100%;
+padding: 10px 0;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+/********** END OF FACILITY SECTION ***************/
+
+/********** START OF CAREER SECTION *****************/
+.career{
+    background-color: #F5F6FA;
+    padding: 30px 0px;
+}
+
+.career .img_placing{
+    display: flex;
+    height: 310px;
+}
+/********** END OF CAREER SECTION *******************/
+/********** START OF CONTACT SECTION *******************/
+
+.contact-heading {
+text-align: center;
+padding-top: 20px;
+}
+.contact-heading h2{
+color: #eb4d4b;
+font-weight: bold;
+}
+
+.contact-heading h3{
+color: #303841;
+font-weight: bold;
+}
+
+.contact-left {
+background-color: #515f63;
+padding: 15px 30px;
+border-radius: 15px;
+height: 514px;
+align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+.contact-right {
+background-color: #515f63;
+padding: 15px 30px;
+border-radius: 15px;
+}
+
+/************ END OF CONTACT SECTION *******************/
+/************ START OF FOOTER SECTION *******************/
+footer{
+background: #303841;
+}
+
+.copyright {
+    text-decoration: none;
+}
+.f-btn .btn:hover{
+background: #EB4D4B;
+color: #fff;
+border: 1px solid #EB4D4B;
+}
+.f-links a:hover{
+color: #EB4D4B !important;
+font-weight: bold;
+font-size: 17px;
+}
+/************ END OF FOOTER SECTION *********************/
+@media screen and (max-width: 768px) {
+    .service_detail a{
+        position: unset;
+        margin-top: 20px;
+    }
+    .career .img_placing{
+        display: none;
+    }
+    .fot_icon {
+
+    }
+    .fot_subs_btn {
+        padding-top: 10px;
+    }
+  }
