@@ -5,6 +5,7 @@ namespace App\Bag\Admin\Delete;
 use App\Models\User;
 use App\Models\Order;
 use App\Models\Region;
+use App\Models\Slider;
 use App\Models\Address;
 use App\Models\Product;
 use App\Models\Category;
@@ -62,9 +63,16 @@ class DeleteData
        $this->fileCheck($product);
         $product->delete();
     }
+    
+    public function sliderDelete($slug)
+    {
+        $product = Slider::where('slug', $slug)->firstOrFail();
+       $this->fileCheck($product);
+        $product->delete();
+    }
     public static function fileCheck($data){
-        if (file_exists($data->thumbnail)) {
-            unlink($data->thumbnail);
+        if (file_exists(substr($data->thumbnail,22,100))) {
+            unlink(substr($data->thumbnail,22,100));
           }
     }
     

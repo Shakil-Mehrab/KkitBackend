@@ -113,5 +113,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
    Route::get('/edit/shippingmethod/{slug}', [App\Http\Controllers\Admin\ShippingMethod\ShippingMethodController::class, 'edit']);
    Route::post('/update/shippingmethod/{slug}', [App\Http\Controllers\Admin\ShippingMethod\ShippingMethodController::class, 'update']);
    Route::get('/search/shippingmethod', [App\Http\Controllers\Admin\ShippingMethod\ShippingMethodController::class, 'search']);
-});
+// Slider
+Route::get('/view/slider', [App\Http\Controllers\Admin\Slider\SliderController::class, 'view']);
+Route::get('/create/slider', [App\Http\Controllers\Admin\Slider\SliderController::class, 'create']);
+Route::post('/store/slider', [App\Http\Controllers\Admin\Slider\SliderController::class, 'store']);
+Route::get('/delete/slider/{slug}', [App\Http\Controllers\Admin\Slider\SliderController::class, 'delete']);
+Route::get('/edit/slider/{slug}', [App\Http\Controllers\Admin\Slider\SliderController::class, 'edit']);
+Route::post('/update/slider/{slug}', [App\Http\Controllers\Admin\Slider\SliderController::class, 'update']);
+Route::get('/search/slider', [App\Http\Controllers\Admin\Slider\SliderController::class, 'search']);
+
+  });
+
+
 
