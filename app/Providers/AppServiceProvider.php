@@ -29,18 +29,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Schema::defaultStringLength(191);
-
-        View::share('categories',Category::orderBy('name', 'asc')->get());
-        View::share('regions',Region::orderBy('name', 'asc')->get());
-        View::share('sizes',Size::get());
-        
-        $this->app->singleton(Cart::class, function($app){
-            if($app->auth->user()){
-                $app->auth->user()->load(['cart.stock']);
-            }
-              ///cart.stock from product variation
-            return new Cart($app->auth->user());
-        });
+        // View::share('categories',Category::orderBy('name', 'asc')->get());
     }
 }

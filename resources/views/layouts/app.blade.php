@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ 'Hatirpal'}}</title>
+    <title>{{ 'KK IT'}}</title>
     <!-- Scripts -->
     <!-- Fonts -->
     <link rel="icon" href="{{asset('images/default/favicon.png')}}">

@@ -21,65 +21,24 @@ class StoreUpdateData
     $product->payment_method_id = $request['payment_method_id'];
     $product->subtotal = $request['subtotal'];
   }
-  public function productStoreUpdate($product, $request)
+  public function contactStoreUpdate($product, $request)
   {
-    $product->name = $request['name'];
-    $product->price = $request['price'];
-    $product->brand = $request['brand'];
-    $product->short_description = $request['short_description'];
-    $product->description = $request['description'];
+    $product->address1 = $request['address1'];
+    $product->address2 = $request['address2'];
+    $product->phone = $request['phone'];
+    $product->email = $request['email'];
   }
 
-  public function productPivotData($product, $request)
+
+  public function courseStoreUpdate($product, $request)
   {
-    $product->categories()
-      ->sync(
-        $request['category_id']
-      );
-    $product->sizes()
-      ->sync(
-        $request['size_id']
-      );
-    return;
+    $product->heading = $request['heading'];
+    $product->description = $request['description'];
   }
-  public function productVariation($product)
+  public function serviceStoreUpdate($product, $request)
   {
-    $variation = new ProductVariation();
-    $variation->name = "Rakibul";
-    $variation->product_id = $product->id;
-    $variation->save();
-    return $variation;
-  }
-  public function productStoreStock($variation,$request)
-  {
-    $stock = new Stock();
-    $stock->quantity = $request['stock'];
-    $stock->product_variation_id = $variation->id;
-    $stock->save();
-  }
-  public function productUpdateStock($product,$request)
-  {
-    if(!empty($product->variations[0])){
-      $stock =Stock::where('product_variation_id',$product->variations[0]->id)->firstOrFail();
-      $stock->quantity = $request['stock'];
-      $stock->update();
-      return;
-     }
-   
-  }
-  public function shippingMethodstoreUpdate($product, $request)
-  {
-    $product->name = $request['name'];
-    $product->price = $request['price'];
-  }
-  public function addressStoreUpdate($product, $request)
-  {
-    $product->country_id = 2;
-    $product->division_id = $request['division_id'];
-    $product->district_id = $request['district_id'];
-    $product->place_id = $request['place_id'];
-    $product->address = $request['address'];
-    $product->postal_code = $request['postal_code'];
+    $product->heading = $request['heading'];
+    $product->description = $request['description'];
   }
   public function sliderStoreUpdate($product, $request)
   {

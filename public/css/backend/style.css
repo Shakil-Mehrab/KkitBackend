@@ -11,6 +11,17 @@ body {
 .has-error label {
     color: red;
 }
+ul li {
+    list-style: none;
+}
+ul {
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #8aa4af;
+}
+
 /* status button  */
 .toggle-on.btn,
 .toggle-off.btn {
@@ -41,6 +52,31 @@ body {
     outline: none;
 }
 /* view */
+.add_button {
+    background-color: #3b4a42;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    border-radius: 4px;
+    align-items: center;
+    padding: 10px 10px;
+}
+.add_button i {
+    font-size: 25px;
+}
+.add_button a {
+    color: white;
+    display: flex;
+}
+.add_button a h5 {
+    display: flex;
+    align-items: center;
+    height: 4px;
+    margin-top: 0.5rem;
+}
+.add_button a:hover i {
+    color: green;
+}
 .search_head {
     /* display: flex; */
 }
@@ -63,7 +99,6 @@ body {
 .bulk_option {
     display: flex;
     justify-items: center;
-    height: 21px;
     margin-bottom: 5px;
 }
 .bulk_option select {
@@ -76,7 +111,7 @@ body {
     border-radius: 5px;
     color: white;
     padding-bottom: 17px;
-    height: 10px;
+    height: 25px;
     overflow: hidden;
 }
 #newData {
@@ -89,6 +124,25 @@ body {
     display: flex;
     justify-content: center;
 }
+/* create */
+.product_cat_div {
+    margin-left: 10px;
+    cursor: pointer;
+}
+.cat_child_div {
+    margin-left: 20px;
+}
+.toggle_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle_menu i {
+    font-size: 20px;
+}
+.hidden {
+    display: none;
+}
 /* edit  */
 .edit_model_heading {
     background-color: #3b4a42;
@@ -99,6 +153,29 @@ body {
 .edit_model_heading h5 {
     margin: auto;
 }
+.view_button {
+    display: flex;
+    justify-content: flex-end;
+}
+/* uder profile */
+.seller {
+    border: 1px solid #e6e5e5;
+    box-shadow: 0 0 4px 0 rgb(0 0 0 / 20%);
+}
+.seller p {
+    text-align: justify;
+}
+.seller .btn {
+    display: flex;
+    justify-content: center;
+}
+.seller a {
+    color: violet;
+}
+.seller a:hover {
+    color: rgb(175, 76, 175);
+}
+
 /* footer */
 footer {
     border: 1px solid #bdbaba;
@@ -122,10 +199,22 @@ footer {
     .left_navigation {
         position: absolute;
         width: 50%;
+        opacity: 1;
+        transform: translateX(-1px);
+        transition: 1s all ease-in-out;
     }
     .toggle_left_navigation {
-        display: none;
+        margin-left: -180px;
+        transition: 1s all ease-in-out;
     }
+    /* before visibility */
+    /* .left_navigation {
+        position: absolute;
+        width: 50%;
+    }
+    .toggle_left_navigation {
+       display: none;
+    } */
     .navbar-toggler {
         display: block;
     }
