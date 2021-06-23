@@ -3,14 +3,16 @@
 namespace App\Http\Controllers\Admin\Bulk;
 
 use App\Models\User;
+use App\Models\Course;
 use App\Models\Slider;
 use App\Models\Contact;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Getintouch;
+use App\Models\Counselling;
 use Illuminate\Http\Request;
 use App\Bag\Admin\Delete\DeleteData;
 use App\Http\Controllers\Controller;
-use App\Models\Course;
 
 class BulkController extends Controller
 {
@@ -64,6 +66,22 @@ class BulkController extends Controller
                 $datas = Course::orderBy('id', 'desc')
                     ->pagination(request('per-page'));
                 $columns = Course::columns();
+            }
+            elseif ($request['model'] == 'counselling') {
+                foreach ($request['checked_slug'] as $slug) {
+                    $delete->counsellingDelete($slug);
+                }
+                $datas = Counselling::orderBy('id', 'desc')
+                    ->pagination(request('per-page'));
+                $columns = Counselling::columns();
+            }
+            elseif ($request['model'] == 'getintouch') {
+                foreach ($request['checked_slug'] as $slug) {
+                    $delete->getintouchDelete($slug);
+                }
+                $datas = Getintouch::orderBy('id', 'desc')
+                    ->pagination(request('per-page'));
+                $columns = Getintouch::columns();
             }
             else{
                 return view('layouts.data.table', compact('datas', 'columns', 'model'))->render();

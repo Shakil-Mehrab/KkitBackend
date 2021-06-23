@@ -1,323 +1,461 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
+    color: #000;
 }
-ul{
+
+a:hover {
+    /* transform: scaley(1.1); */
+    translate: 0.7s;
+}
+
+ul {
     padding: 0;
     margin: 0;
 }
-li{
+
+li {
     padding: 0;
     margin: 0;
     list-style: none;
 }
+
 /********** START COMMON CLASS *************/
-.brand_color{
-    color: #ED2024;
+.brand_color {
+    color: #ed2024;
 }
-.btn_color{
-background: #ED2024;
-border: none;
+
+.btn_color {
+    background: #ed2024;
+    color: #fff;
+    border: none;
 }
-.btn-danger{
-background: #ED2024 !important;
+
+.btn-danger {
+    background: #ed2024 !important;
 }
+
 /********** END OF COMMON CLASS *************/
 /********** START OF HEADER*************/
 
 nav {
-   min-height: 80px;
-   background: #F5F6FA;
-
+    min-height: 80px;
+    background: #f5f6fa;
 }
-nav .dropdown_item{
-    /* border:1px solid #e0d8d8; */
-    position:absolute;
-    top:50px;
-    left:0px;
+
+.logo {
+    width: 280px;
+    height: 60px;
+}
+
+nav .service_dropdown_item {
+    position: absolute;
+    top: 50px;
+    left: 40%;
     z-index: 9999;
-    background-image: linear-gradient(#F5F6FA, white);
+    background-image: linear-gradient(#f5f6fa, white);
+    visibility: hidden;
+    opacity: 0;
+    width: 30%;
+}
+
+nav .nav-item:hover .service_dropdown_item {
+    color: #ed2024;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(10px);
+    transition: 0.7s;
+}
+
+nav .service_dropdown_item:hover a {
+    color: #ed2024;
+}
+
+nav .dropdown_item {
+    /* border:1px solid #e0d8d8; */
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    z-index: 9999;
+    background-image: linear-gradient(#f5f6fa, white);
     visibility: hidden;
     opacity: 0;
     width: 100%;
 }
-nav .nav-item:hover .dropdown_item{
+
+nav .nav-item:hover .dropdown_item {
     visibility: visible;
     opacity: 1;
     transform: translateY(10px);
-    transition: 1s;
+    transition: 0.7s;
 }
-.nav_ul li a span{
+
+nav .nav_ul li:hover a {
+    color: #ed2024;
+    font-weight: bold;
+    transform: scaleY(1.3);
+    transition: 0.3s;
+}
+
+.nav_ul li a span {
     font-size: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.navbar {
-background: #000;
-padding: 1rem 8rem;
-z-index: 9999;
-}
-.navbar .navbar-brand {
-font-size: 1.4rem;
-font-weight: 700;
-}
-.slider_size {
-width: 1000px;
-height: 400px;
-}
-#navbarSupportedContent > ul > li:nth-child(n) > a {
-color: #fff;
-font-size: 1.1rem;
-padding: 0 0.8rem;
-}
-#navbarSupportedContent > ul > li:nth-child(n) > a:hover {
-color: #00bf6d;
-}
-#navbarSupportedContent button {
-background: #00bf6d;
-font-weight: 600;
-padding: 0.4rem 1.4rem;
-border-radius: 30px;
-}
-#navbarSupportedContent button:hover {
-background: #fff;
-}
-.mid {
-width: 100%;
-height: 85vh;
-overflow: hidden;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-content: center;
-}
-.mid video {
-width: 100%;
-height: 100%;
-object-fit: cover;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-text-align: center;
-}
-.hero {
-position: relative;
-}
-.mid .hero p {
-width: 55%;
-font-size: 1.3rem;
-letter-spacing: 0.2px;
-}
-.mid .hero a{
-background: #00bf6d;
-font-weight: 600;
-padding: 0.6rem 1.5rem;
-border-radius: 30px;
-text-decoration: none;
-}
-.mid .hero a:hover {
-background: #fff;
-}*/
 /****************** END OF HEADER **************/
 /********** START OF ABOUT SECTION *************/
 #about {
-background: #F5F6FA;
-/*background: #C8BFE7;*/
-padding-top: 2rem;
-padding-bottom: 2rem;
+    background: #f5f6fa;
+    /*background: #C8BFE7;*/
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
-#about h2{
-text-align: center;
-justify-content: center;
+
+#about h2 {
+    text-align: center;
+    justify-content: center;
 }
-#about h3{
-padding-top: 10px;
+
+#about h3 {
+    padding-top: 10px;
 }
-#about p{
-text-align: justify;
+
+#about p {
+    text-align: justify;
 }
+
 /********** END OF ABOUT SECTION *************/
 /********** START OF COURSE SECTION *************/
-.course{
-background: #fff;
+.course {
+    background: #fff;
 }
-.course h2{
-color: #ED2024;
-text-align: center;
-font-weight: bold;
-padding-top: 25px;
+
+.course h2 {
+    color: #ed2024;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 25px;
 }
-.course .course_p{
-text-align: center;
-font-size: 18px;
-font-weight: 400;
+
+.course_title:hover {
+    color: #ed2024;
+}
+
+.course .course_p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.course .card:hover {
+    transform: translate(5px, -15px);
+    transition: 0.4s;
+    /* box-shadow: 7px 7px #7c7575; */
+}
+
+.course_hover {
+    box-shadow: none;
+    outline: none;
+}
+
+.course .course_hover:hover {
+    font-weight: bold;
+    color: #ed2024 !important;
+    background-color: #fff;
+    border: 2px solid #ed2024;
+    box-shadow: none;
+    outline: none;
 }
 
 /********** END OF COURSE SECTION *****************/
 /********** START OF SERVICE SECTION *************/
-.service{
-background: #F5F6FA;
-/*padding-left: 80px;*/
-}
-.service h2{
-color: #ED2024;
-text-align: center;
-font-weight: bold;
-padding-top: 25px;
+.service {
+    background: #f5f6fa;
+    /*padding-left: 80px;*/
 }
 
-.service .card_size{
-    min-height: 600px ;
-}
-.service .service_p{
-text-align: center;
-font-size: 18px;
-font-weight: 400;
+.service h2 {
+    color: #ed2024;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 25px;
 }
 
-.service ul li a{
-color: #000;
-font-weight: 500;
+.service_title:hover {
+    color: #ed2024;
 }
-.card-body{
+
+.service .card_size {
+    min-height: 600px;
+}
+
+.service .service_p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.service ul li a {
+    color: #000;
+    font-weight: 500;
+}
+
+.card-body {
     position: relative;
 }
 
-.service_detail a{
+.service_detail a {
     position: absolute;
     bottom: 25px;
 }
-/********** END OF SERVICE SECTION *****************/
-/********** START OF FACILITY SECTION *************/
-.facility{
-background: #fff;
-}
-.facility h2{
-color: #ED2024;
-font-weight: bold;
-padding: 15px 0;
-text-align: center;
-justify-content: center;
-font-weight: 600;
+
+.service .card:hover {
+    transform: translate(-5px, -15px);
+    transition: 0.4s;
+    /* box-shadow: 3px 3px #bdbdbd; */
 }
 
-.facility .card_size{
-    min-height: 450px ;
-    max-height: 450px ;
+.service_hover {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.service .service_hover:hover {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ed2024;
+    background-color: #fff;
+    border: 2px solid #ed2024;
+    box-shadow: none;
+    outline: none !important;
+}
+
+/********** END OF SERVICE SECTION *****************/
+/********** START OF FACILITY SECTION *************/
+.facility {
+    background: #fff;
+}
+
+.facility h2 {
+    color: #ed2024;
+    font-weight: bold;
+    padding: 15px 0;
+    text-align: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.facility .card_size {
+    min-height: 450px;
+    max-height: 450px;
     overflow: hidden;
 }
 
 .faci_img {
-width: 100%;
-height: 100%;
-padding: 10px 0;
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 50%;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
+
 /********** END OF FACILITY SECTION ***************/
 
 /********** START OF CAREER SECTION *****************/
-.career{
-    background-color: #F5F6FA;
+.career {
+    background-color: #f5f6fa;
     padding: 30px 0px;
 }
 
-.career .img_placing{
+.career .img_placing {
     display: flex;
     height: 310px;
 }
+
 /********** END OF CAREER SECTION *******************/
 /********** START OF CONTACT SECTION *******************/
 
 .contact-heading {
-text-align: center;
-padding-top: 20px;
-}
-.contact-heading h2{
-color: #eb4d4b;
-font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
 }
 
-.contact-heading h3{
-color: #303841;
-font-weight: bold;
+.contact-heading h2 {
+    color: #eb4d4b;
+    font-weight: bold;
+}
+
+.contact-heading h3 {
+    color: #303841;
+    font-weight: bold;
 }
 
 .contact-left {
-background-color: #515f63;
-padding: 15px 30px;
-border-radius: 15px;
-height: 514px;
-align-items: center;
+    background-color: #515f63;
+    padding: 15px 30px;
+    border-radius: 15px;
+    height: 514px;
+    align-items: center;
     justify-content: center;
     display: flex;
-
 }
 
 .contact-right {
-background-color: #515f63;
-padding: 15px 30px;
-border-radius: 15px;
+    background-color: #515f63;
+    padding: 15px 30px;
+    border-radius: 15px;
 }
 
 /************ END OF CONTACT SECTION *******************/
 /************ START OF FOOTER SECTION *******************/
-footer{
-background: #303841;
+footer {
+    background: #303841;
 }
 
 .copyright {
     text-decoration: none;
 }
-.f-btn .btn:hover{
-background: #EB4D4B;
-color: #fff;
-border: 1px solid #EB4D4B;
+
+.f-btn .btn:hover {
+    background: #eb4d4b;
+    color: #fff;
+    border: 1px solid #eb4d4b;
 }
-.f-links a:hover{
-color: #EB4D4B !important;
-font-weight: bold;
-font-size: 17px;
+
+.f-links a:hover {
+    color: #eb4d4b !important;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.4s;
 }
+
 /************ END OF FOOTER SECTION *********************/
+
+/*******************************************************************************
+                            START OF ALL COURSE PAGE 
+ *******************************************************************************/
+
+.all_course .divider {
+    width: 100px;
+    height: 3px;
+    background-color: #515f63;
+    display: inline-block;
+    opacity: 0.3;
+    border-radius: 5px;
+}
+
+.hover_button {
+    width: 100%;
+    height: 180px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    flex-direction: coloumn;
+    background-color: rgba(26, 25, 25, 0.739);
+    /* background-colorgba(36, 35, 35, 0.6).6); */
+}
+
+.card:hover .hover_button {
+    display: flex;
+}
+
+.course_btn {
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.course_btn:hover {
+    text-color: #000 !important;
+    background-color: #fff;
+    transition: 0.7s;
+}
+
+.enroll_btn {
+    font-size: 10px;
+}
+
+.review i {
+    color: #ffb606;
+}
+
+/*****************************************************************************
+                            END OF ALL COURSE PAGE 
+ *****************************************************************************/
+
+/*****************************************************************************
+                            START OF SERVICE PAGE 
+ *****************************************************************************/
+
+.service_page .card-body li {
+    border-bottom: 1px solid #e8ecec;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.service_page .card-body li:last-child {
+    border-bottom: unset;
+}
+.service_page .button_height button {
+    font-size: 20px;
+}
+
+/******************************************************************************
+                            END OF SERVICE PAGE 
+ ******************************************************************************/
+
+/*****************************************************************************
+                            START OF Login or Sign up PAGE 
+*****************************************************************************/
+.log_in {
+    top: 20;
+    background-color: #eef1f7;
+    padding: 25px 40px;
+    border-radius: 5px;
+    min-height: 405px;
+    justify-content: center;
+}
+
+.sign_up {
+    background-color: #eef1f7;
+    padding: 25px 40px;
+    border-radius: 5px;
+}
+
+/*****************************************************************************
+                            END OF Login or Sign up PAGE 
+*****************************************************************************/
+
+/*******************************************************************************
+                            START OF ALL MEDIA QUERY 
+ *******************************************************************************/
+
 @media screen and (max-width: 768px) {
-    .service_detail a{
+    .service_detail a {
         position: unset;
         margin-top: 20px;
     }
-    .career .img_placing{
+
+    .career .img_placing {
         display: none;
     }
-    .fot_icon {
 
+    .fot_icon {
     }
+
     .fot_subs_btn {
         padding-top: 10px;
     }
-  }
+}

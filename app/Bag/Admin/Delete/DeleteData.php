@@ -3,12 +3,16 @@
 namespace App\Bag\Admin\Delete;
 
 use App\Models\User;
-use App\Models\Slider;
-use App\Models\Product;
-use App\Models\Category;
-use App\Models\Contact;
+use App\Models\About;
 use App\Models\Course;
+use App\Models\Slider;
+use App\Models\Contact;
+use App\Models\Product;
 use App\Models\Service;
+use App\Models\Support;
+use App\Models\Category;
+use App\Models\Getintouch;
+use App\Models\Counselling;
 
 class DeleteData
 {
@@ -54,6 +58,30 @@ class DeleteData
     public function serviceDelete($slug)
     {
         $product = Service::where('slug', $slug)->firstOrFail();
+        $this->fileCheck($product);
+        $product->delete();
+    }
+    public function supportDelete($slug)
+    {
+        $product = Support::where('slug', $slug)->firstOrFail();
+        $this->fileCheck($product);
+        $product->delete();
+    }
+    public function aboutDelete($slug)
+    {
+        $product = About::where('slug', $slug)->firstOrFail();
+        $this->fileCheck($product);
+        $product->delete();
+    }
+    public function counsellingDelete($slug)
+    {
+        $product = Counselling::where('slug', $slug)->firstOrFail();
+        $this->fileCheck($product);
+        $product->delete();
+    }
+    public function getintouchDelete($slug)
+    {
+        $product = Getintouch::where('slug', $slug)->firstOrFail();
         $this->fileCheck($product);
         $product->delete();
     }

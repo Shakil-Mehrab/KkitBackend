@@ -13,7 +13,7 @@ use App\Http\Requests\Contact\ContactInputRequest;
 
 class ContactController extends Controller
 {
-  public function view()
+  public function index()
   {
     $datas = Contact::orderBy('id', 'desc')
       ->pagination(request('per-page'));
@@ -51,7 +51,7 @@ class ContactController extends Controller
     $imageHandling->uploadImage($product, $request, 'contact');
 
     $product->save();
-    return redirect('admin/view/contact')
+    return redirect('admin/contact')
       ->withSuccess('Contact Created Successfully');
   }
   public function edit($slug)

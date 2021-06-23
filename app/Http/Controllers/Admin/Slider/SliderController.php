@@ -14,7 +14,7 @@ use App\Http\Requests\Slider\SliderUpdateRequest;
 
 class SliderController extends Controller
 {
-    public function view()
+    public function index()
     {
       $datas = Slider::orderBy('id', 'desc')
         ->pagination(request('per-page'));

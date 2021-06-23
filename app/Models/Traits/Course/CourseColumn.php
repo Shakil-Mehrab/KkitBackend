@@ -20,7 +20,7 @@ trait CourseColumn
     {
         return collect(Schema::getColumnListing(Course::getQuery()->from))
             ->reject(function ($column) {
-                return in_array($column,['id','slug','thumbnail','created_at','updated_at']);
+                return in_array($column,['id','slug','description','thumbnail','created_at','updated_at']);
 
             })
             ->toArray();
@@ -29,7 +29,7 @@ trait CourseColumn
     {
         return collect(Schema::getColumnListing(Course::getQuery()->from))
             ->reject(function ($column) {
-                return in_array($column,['id','slug','thumbnail','created_at','updated_at']);
+                return in_array($column,['id','slug','description','thumbnail','created_at','updated_at']);
 
             })
             ->toArray();

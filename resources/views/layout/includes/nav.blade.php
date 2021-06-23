@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img style="height: 100%;" src="frontimages/logo/logo.png">
+        <a class="navbar-brand" href="/">
+          <img style="height: 100%;" src="{{asset('frontimages/logo/logo.png')}}">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -12,7 +12,7 @@
               <a class="nav-link active fw-bold" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold" aria-current="page" href="#">Services</a>
+              <a class="nav-link fw-bold" aria-current="page" href="/front/service">Services</a>
               <div class="p-5 shadow-sm dropdown_item">
                 <div class="row" >
                   <div class="col-md-3">
@@ -53,7 +53,7 @@
               
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold" aria-current="page" href="#">Courses</a>
+              <a class="nav-link fw-bold" aria-current="page" href="/front/course">Courses</a>
               <div class="p-5 shadow-sm dropdown_item">
                 <div class="row" >
                   <div class="col-md-3">
@@ -96,7 +96,7 @@
               <a class="nav-link fw-bold" aria-current="page" href="#">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold" aria-current="page" href="{{url('/contact/us')}}">Contact Us</a>
+              <a class="nav-link fw-bold" aria-current="page" href="{{url('/front/contact')}}">Contact Us</a>
             </li>
           </ul>
           <ul class="navbar-nav mb-2 mb-lg-0">

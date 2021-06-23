@@ -32,7 +32,7 @@
                 <i class="fas fa-chevron-right"></i>
             </a>
             <ul class="tree_li_ul">
-                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/view/user')}}">View User</a></li>
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/user')}}">View User</a></li>
             </ul>
         </li>
         </li>
@@ -42,8 +42,8 @@
                 <i class="fas fa-chevron-right"></i>
             </a>
             <ul class="tree_li_ul">
-                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/create/contact')}}">Add Contact</a></li>
-                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/view/contact')}}">View Contact</a></li>
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/contact/create')}}">Add Contact</a></li>
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/contact')}}">View Contact</a></li>
             </ul>
         </li>
         <li class="tree_li mb-2">
@@ -52,8 +52,8 @@
                 <i class="fas fa-chevron-right"></i>
             </a>
             <ul class="tree_li_ul">
-                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/create/course')}}">Add Course</a></li>
-                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/view/course')}}">View Course</a></li>
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/course/create')}}">Add Course</a></li>
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/course')}}">View Course</a></li>
             </ul>
         </li>
         <li class="tree_li mb-2">
@@ -62,29 +62,59 @@
                 <i class="fas fa-chevron-right"></i>
             </a>
             <ul class="tree_li_ul">
-                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/create/slider')}}">Add Slider</a></li>
-                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/view/slider')}}">View Slider</a></li>
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/slider/create')}}">Add Slider</a></li>
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/slider')}}">View Slider</a></li>
             </ul>
         </li>
         
          <li class="tree_li mb-2">
             <a class="change_color_to_dark_white" href="#" style="position: relative;">
-            Our Services
+             Services
                 <i class="fas fa-chevron-right"></i>
             </a>
             <ul class="tree_li_ul">
-                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/create/service')}}">Add Services</a></li>
-                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/view/service')}}">View Services</a></li>
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/service/create')}}">Add Services</a></li>
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/service')}}">View Services</a></li>
             </ul>
         </li>
         </li> <li class="tree_li mb-2">
             <a class="change_color_to_dark_white" href="#" style="position: relative;">
-            Our Supports
+             Supports
                 <i class="fas fa-chevron-right"></i>
             </a>
             <ul class="tree_li_ul">
-                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/create/slider')}}">Add Supports</a></li>
-                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/view/slider')}}">View Supports</a></li>
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/support/create')}}">Add Supports</a></li>
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/support')}}">View Supports</a></li>
+            </ul>
+        </li>
+         <li class="tree_li mb-2">
+            <a class="change_color_to_dark_white" href="#" style="position: relative;">
+             About
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            <ul class="tree_li_ul">
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/about/create')}}">Add About</a></li>
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/about')}}">View About</a></li>
+            </ul>
+        </li>
+        <li class="tree_li mb-2">
+            <a class="change_color_to_dark_white" href="#" style="position: relative;">
+            Counselling
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            <ul class="tree_li_ul">
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/counselling/create')}}">Add Counselling</a></li>
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/counselling')}}">View Counselling</a></li>
+            </ul>
+        </li>
+        <li class="tree_li mb-2">
+            <a class="change_color_to_dark_white" href="#" style="position: relative;">
+            Get In Touch
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            <ul class="tree_li_ul">
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/getintouch/create')}}">Add Get In Touch</a></li>
+                <li class="tree_li_ul_li"><a class="change_color_to_dark_white" href="{{url('admin/getintouch')}}">View Get In Touch</a></li>
             </ul>
         </li>
         <li class="tree_li mb-2">

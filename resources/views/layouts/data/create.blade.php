@@ -5,13 +5,13 @@
 @section('content')
 <div class="mt-2">
     <div class="edit_model_heading">
-        <h5 class="text-center">Edit {{ucfirst($model)}}</h5>
+        <h5 class="text-center">Create {{ucfirst($model)}}</h5>
     </div>
     <br>
     <div class="view_button">
-        <a href="#" class="btn btn-primary btn-sm">View {{ucfirst($model)}}</a>
+        <a href="{{url('admin/'.$model)}}" class="btn btn-primary btn-sm">View {{ucfirst($model)}}</a>
     </div>
-    <form action="{{url('admin/store/'.$model)}}" method="post" enctype="multipart/form-data">
+    <form action="{{url('admin/'.$model)}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row">
             @forelse($columns as $column)
@@ -48,11 +48,22 @@
 
             @if($model=='course')
             @include('layouts.data.thumbnail')
+            @include('layouts.data.description')
+            @endif
+
+            @if($model=='support')
+            @include('layouts.data.thumbnail')
+            @include('layouts.data.description')
+            @endif
+
+            @if($model=='about')
+            @include('layouts.data.thumbnail')
+            @include('layouts.data.description')
             @endif
 
             @if($model=='service')
             @include('layouts.data.thumbnail')
-            @include('layouts.service.partial')
+            @include('layouts.data.description')
             @endif
 
             @if($model=='category')

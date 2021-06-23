@@ -13,7 +13,7 @@ use App\Http\Requests\Service\ServiceInputRequest;
 
 class ServiceControlller extends Controller
 {
-    public function view()
+    public function index()
     {
       $datas = Service::orderBy('id', 'desc')
         ->pagination(request('per-page'));

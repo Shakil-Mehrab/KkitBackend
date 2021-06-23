@@ -7,6 +7,7 @@ use App\Models\Contact;
 use App\Models\Course;
 use App\Models\Service;
 use App\Models\Slider;
+use App\Models\Support;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -16,7 +17,8 @@ class FrontController extends Controller
         $courses=Course::orderBy('id','desc')->take(3)->get();
         $contact=Contact::latest()->first();
         $services=Service::orderBy('id','desc')->take(3)->get();
-        return view("welcome",compact('slides','courses','contact','services'));
+        $supports=Support::orderBy('id','desc')->take(6)->get();
+        return view("welcome",compact('slides','courses','contact','services','supports'));
         
     }
 }

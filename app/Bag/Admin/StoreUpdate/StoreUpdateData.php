@@ -4,6 +4,7 @@ namespace App\Bag\Admin\StoreUpdate;
 
 use App\Models\Stock;
 use App\Models\ProductVariation;
+use Hamcrest\Description;
 
 class StoreUpdateData
 {
@@ -39,6 +40,30 @@ class StoreUpdateData
   {
     $product->heading = $request['heading'];
     $product->description = $request['description'];
+  }
+  public function supportStoreUpdate($product, $request)
+  {
+    $product->heading = $request['heading'];
+    $product->description = $request['description'];
+  }
+  public function aboutStoreUpdate($product, $request)
+  {
+    $product->name = $request['name'];
+    $product->description = $request['description'];
+    $product->short_description = $request['short_description'];
+  }
+  public function counsellingStoreUpdate($product, $request)
+  {
+    $product->name = $request['name'];
+    $product->email = $request['email'];
+    $product->phone = $request['phone'];
+  }
+  public function getintouchStoreUpdate($product, $request)
+  {
+    $product->name = $request['name'];
+    $product->email = $request['email'];
+    $product->subject = $request['subject'];
+    $product->message = $request['message'];
   }
   public function sliderStoreUpdate($product, $request)
   {

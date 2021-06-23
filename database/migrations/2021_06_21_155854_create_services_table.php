@@ -18,7 +18,7 @@ class CreateServicesTable extends Migration
             $table->string('slug');
             $table->string('heading');
             $table->text('description');
-            $table->string('thumbnail')->default('images/default/course.png');
+            $table->string('thumbnail')->default('images/default/services.png');
             $table->timestamps();
         });
     }
