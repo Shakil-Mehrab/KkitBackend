@@ -19,24 +19,6 @@
         </div>
       </div>
 
-      <form action="">
-        <div class="row d-flex justify-content-center my-4">
-          <div class="col-auto pt-2">
-            <p>Sign up for our newslatter</p>
-          </div>
-          <div class="col-md-5">
-            <div class="form-outline form-white">
-              <input type="email" placeholder="Enter your email address" class="form-control">
-            </div>
-          </div>
-          <div class="col-auto f-btn">
-            <div class="fot_subs_btn">
-              <button class="btn btn-outline-light">Subscribe</button>
-            </div>
-          </div>
-        </div>
-      </form>
-
       <!-- <div class="py-3 f-btn ">
           <span class="me-3">Register for free</span>
           <button class="btn  btn-outline-light">Sign up</button>

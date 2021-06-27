@@ -160,7 +160,7 @@
       @forelse($supports as $support)
       <div class="col-lg-4 col-md-4 col-12 my-2">
         <div class="card card_size">
-        <img src="{{asset($support->thumbnail)}}" class="card-img-top" alt="!">
+          <img src="{{asset($support->thumbnail)}}" class="card-img-top" alt="!">
           <div class="card-body">
             <h5 class="card-title">{{$support->heading}}</h5>
             <p class="card-text"><?php echo str_replace('"', "", $support->description); ?></p>
@@ -225,15 +225,31 @@
     <div class="row">
       <div class="col-lg-6 col-md-6 col-12">
         <h2 class="brand_color fw-bold my-4">Career Counselling</h2>
-        <form>
-          <div class="col-md-12">
-            <input class="form-control" type="text" name="name" placeholder="Enter your name"><br>
+        <form action="{{url('front/counselling/store')}}" method="POST">
+          @csrf
+          <div class="col-md-12 form-group {{ $errors->has('customer_name') ? ' has-error' : '' }} mb-4">
+            <input class="form-control" type="text" name="customer_name" id="customer_name" placeholder="Enter your name" value="{{old('customer_name')}}">
+            @if ($errors->has('customer_name'))
+            <span class="help-block">
+              <strong style="color:red">{{ $errors->first('customer_name') }}</strong>
+            </span>
+            @endif
           </div>
-          <div class="col-md-12">
-            <input class="form-control" type="text" name="email" placeholder="Enter your email"><br>
+          <div class="col-md-12 form-group {{ $errors->has('customer_email') ? ' has-error' : '' }} mb-4">
+            <input class="form-control" type="email" name="customer_email" id="customer_email" placeholder="Enter your email" value="{{old('customer_email')}}">
+            @if ($errors->has('customer_email'))
+            <span class="help-block">
+              <strong style="color:red">{{ $errors->first('customer_email') }}</strong>
+            </span>
+            @endif
           </div>
-          <div class="col-md-12">
-            <input class="form-control" type="text" name="phone" placeholder="Enter your phone number"><br>
+          <div class="col-md-12 form-group {{ $errors->has('phone') ? ' has-error' : '' }} mb-4">
+            <input class="form-control" type="text" name="phone" id="phone" placeholder="Enter your phone number" value="{{old('phone')}}">
+            @if ($errors->has('phone'))
+            <span class="help-block">
+              <strong style="color:red">{{ $errors->first('phone') }}</strong>
+            </span>
+            @endif
           </div>
           <div class="col-md-12">
             <input class="form-control btn btn-danger" type="submit" name="submit" value="Submit">
@@ -241,7 +257,7 @@
         </form>
       </div>
       <div class="col-lg-6 col-md-6 col-12 img_placing">
-        <img src="{{asset('frontimages/career-counselling.png')}}" width="100%">
+        <img src="{{asset('frontimages/courses/career-counselling.png')}}" width="100%">
       </div>
     </div>
   </div>
@@ -273,13 +289,42 @@
         <div class="contact-right mb-4">
           <h2 class="text-light text-center py-4">GET IN TOUCH</h2>
           <div class="mx-4">
-            <form action="">
-              <input type="text" placeholder="Name" class="form-control"><br>
-              <input type="text" placeholder="Email" class="form-control"><br>
-              <input type="text" placeholder="Subject" class="form-control"><br>
-              <textarea name="" id="" cols="50" rows="5" placeholder="Message" class="form-control "></textarea>
+            <form action="{{url('front/getintouch/store')}}" method="POST">
+              @csrf
+              <div class="col-md-12 form-group {{ $errors->has('name') ? ' has-error' : '' }} mb-4">
+              <input type="text" name="name" placeholder="Name" id="name" value="{{old('name')}}" class="form-control">
+              @if ($errors->has('name'))
+              <span class="help-block">
+                <strong style="color:red">{{ $errors->first('name') }}</strong>
+              </span>
+              @endif
+              </div>
+              <div class="col-md-12 form-group {{ $errors->has('email') ? ' has-error' : '' }} mb-4">
+              <input type="email" name="email" id="email" value="{{old('email')}}" placeholder="Email" class="form-control">
+              @if ($errors->has('email'))
+              <span class="help-block">
+                <strong style="color:red">{{ $errors->first('name') }}</strong>
+              </span>
+              @endif
+              </div>
+              <div class="col-md-12 form-group {{ $errors->has('subject') ? ' has-error' : '' }} mb-4">
+              <input type="text" name="subject" id="subject" value="{{old('subject')}}" placeholder="Subject" class="form-control">
+              @if ($errors->has('subject'))
+              <span class="help-block">
+                <strong style="color:red">{{ $errors->first('name') }}</strong>
+              </span>
+              @endif
+              </div>
+              <div class="col-md-12 form-group {{ $errors->has('message') ? ' has-error' : '' }} mb-4">
+              <textarea name="message" id="" cols="50" rows="5" placeholder="Message" class="form-control ">{{old('message')}}</textarea>
+              @if ($errors->has('message'))
+              <span class="help-block">
+                <strong style="color:red">{{ $errors->first('message') }}</strong>
+              </span>
+              @endif
+              </div>
+              <button type="submit" class="btn btn-danger form-control  my-3">Send Mail</button>
             </form>
-            <button type="button" class="btn btn-danger form-control  my-3">Send Mail</button>
           </div>
         </div>
       </div>

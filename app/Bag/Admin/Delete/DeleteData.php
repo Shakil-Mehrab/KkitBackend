@@ -13,6 +13,7 @@ use App\Models\Support;
 use App\Models\Category;
 use App\Models\Getintouch;
 use App\Models\Counselling;
+use App\Models\Orderablecourse;
 
 class DeleteData
 {
@@ -82,6 +83,12 @@ class DeleteData
     public function getintouchDelete($slug)
     {
         $product = Getintouch::where('slug', $slug)->firstOrFail();
+        $this->fileCheck($product);
+        $product->delete();
+    }
+    public function orderablecourseDelete($slug)
+    {
+        $product = Orderablecourse::where('slug', $slug)->firstOrFail();
         $this->fileCheck($product);
         $product->delete();
     }

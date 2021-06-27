@@ -11,6 +11,7 @@ use App\Models\Category;
 use App\Models\Getintouch;
 use App\Models\Counselling;
 use Illuminate\Http\Request;
+use App\Models\Orderablecourse;
 use App\Bag\Admin\Delete\DeleteData;
 use App\Http\Controllers\Controller;
 
@@ -82,6 +83,14 @@ class BulkController extends Controller
                 $datas = Getintouch::orderBy('id', 'desc')
                     ->pagination(request('per-page'));
                 $columns = Getintouch::columns();
+            }
+            elseif ($request['model'] == 'orderablecourse') {
+                foreach ($request['checked_slug'] as $slug) {
+                    $delete->orderablecourseDelete($slug);
+                }
+                $datas = Orderablecourse::orderBy('id', 'desc')
+                    ->pagination(request('per-page'));
+                $columns = Orderablecourse::columns();
             }
             else{
                 return view('layouts.data.table', compact('datas', 'columns', 'model'))->render();

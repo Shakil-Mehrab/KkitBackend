@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Counselling;
+namespace App\Http\Requests\Orderablecourse;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CounsellingInputRequest extends FormRequest
+class OrderablecourseInputRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,8 @@ class CounsellingInputRequest extends FormRequest
     public function rules()
     {
         return [
-            'customer_name'=>'required',
-            'phone'=>'required',
-            'customer_email'=>'required|max:50',
+            'heading'=>'required',
+            'price'=>'required',
         ];
     }
 }

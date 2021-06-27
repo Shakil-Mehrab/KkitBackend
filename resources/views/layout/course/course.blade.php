@@ -1,5 +1,6 @@
 @extends('layout.master')
 @section('content')
+
 <section class="all_course">
     <div>
         <img class="w-100" height="300px" src="{{asset('frontimages/course_banner.jpg')}}" alt="!">
@@ -13,24 +14,26 @@
         </div>
         <div class="container">
             <div class="row">
+            @forelse($courses as $orderablecourse)
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card my-2">
                         <div class="hover_button">
-                            <button class="btn btn-form course_btn fw-bold">View Course</button>
+                            <a href="#"><button class="btn btn-form course_btn fw-bold">View Course</button></a>
                         </div>
-                        <img src="{{asset('frontimages/Courses/course-1.jpg')}}" class="card-img-top" alt="!">
+                        <img src="{{asset($orderablecourse->thumbnail)}}" class="card-img-top" alt="!">
                         <div class="card-body">
-                            <a class="card-title fw-bold web_title" href="#">Web Design (Frontend Development)</a>
+                            <a class="card-title fw-bold web_title" href="#">{{$orderablecourse->heading}}</a>
                             <div class="review  p-3">
+                                @for($i=1;$i<=$orderablecourse->rating;$i++)
+                                <i class="fa fa-star" style="color:orange"></i>
+                                @endfor
+                                @for($i=1;$i<=5-$orderablecourse->rating;$i++)
                                 <i class="fa fa-star"></i>
-                                <i class="fa fa-star mx-3"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star mx-3"></i>
-                                <i class="fa fa-star"></i>
+                                @endfor
                             </div>
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
-                                    ৳ 3500.00
+                                {{$orderablecourse->price}} TK
                                 </div>
                                 <div class="col-md-6 col-sm-6">
                                     <button class="btn btn-form fw-bold btn-danger enroll_btn">Enroll Course</button>
@@ -39,7 +42,9 @@
                         </div>
                     </div>
                 </div>
-
+            @empty
+            @endforelse
+<!-- 
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card my-2">
                         <div class="hover_button">
@@ -123,7 +128,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -143,7 +148,7 @@
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card my-2">
                         <div class="hover_button">
-                            <button class="btn btn-form course_btn fw-bold">View Course</button>
+                            <a href="#"><button class="btn btn-form course_btn fw-bold">View Course</button></a>
                         </div>
                         <img src="{{asset('frontimages/Courses/course-2.jpg')}}" class="card-img-top" alt="!">
                         <div class="card-body">

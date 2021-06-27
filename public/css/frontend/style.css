@@ -27,7 +27,10 @@ li {
     margin: 0;
     list-style: none;
 }
-
+.has-error input,
+.has-error textarea {
+    border: 1px solid red;
+}
 /********** START COMMON CLASS *************/
 .brand_color {
     color: #ed2024;
@@ -254,7 +257,6 @@ nav .nav_ul li:hover a {
 
 .facility .card_size {
     min-height: 450px;
-    max-height: 450px;
     overflow: hidden;
 }
 
@@ -267,7 +269,6 @@ nav .nav_ul li:hover a {
     margin-right: auto;
     width: 50%;
 }
-
 /********** END OF FACILITY SECTION ***************/
 
 /********** START OF CAREER SECTION *****************/
@@ -387,9 +388,9 @@ footer {
     font-size: 10px;
 }
 
-.review i {
+/* .review i {
     color: #ffb606;
-}
+} */
 
 /*****************************************************************************
                             END OF ALL COURSE PAGE 

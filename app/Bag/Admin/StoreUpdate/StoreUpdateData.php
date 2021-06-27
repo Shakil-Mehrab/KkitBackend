@@ -65,6 +65,13 @@ class StoreUpdateData
     $product->subject = $request['subject'];
     $product->message = $request['message'];
   }
+  public function orderablecourseStoreUpdate($product, $request)
+  {
+    $product->heading = $request['heading'];
+    $product->price = $request['price'];
+    $product->rating = $request['rating'];
+    $product->description = $request['description'];
+  }
   public function sliderStoreUpdate($product, $request)
   {
     $product->heading = $request['heading'];

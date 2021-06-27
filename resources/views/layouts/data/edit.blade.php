@@ -52,6 +52,11 @@
       @include('layouts.data.description')
       @endif
 
+      @if($model=='orderablecourse')
+      @include('layouts.data.thumbnail')
+      @include('layouts.data.description')
+      @endif
+
       @if($model=='support')
       @include('layouts.data.thumbnail')
       @include('layouts.data.description')

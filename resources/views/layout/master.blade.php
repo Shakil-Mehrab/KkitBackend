@@ -16,6 +16,8 @@
 
 
   @include('layout.includes.nav')
+  @include('message.alert')
+
   @yield('content')
   @include('layout.includes.footer')
   

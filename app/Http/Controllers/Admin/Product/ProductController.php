@@ -16,7 +16,7 @@ use App\Http\Requests\Product\ProductUpdateRequest;
 
 class ProductController extends Controller
 {
-  public function view()
+  public function index()
   {
     $datas = Product::orderBy('id', 'desc')
       ->pagination(request('per-page'));

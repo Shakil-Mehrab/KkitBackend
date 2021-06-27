@@ -37,6 +37,9 @@ a {
 
 .main_content {
     margin-bottom: 50px;
+    margin-top: 55px;
+    height: 600px;
+    overflow: scroll;
 }
 
 /* create page */

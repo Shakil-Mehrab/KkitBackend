@@ -7,6 +7,10 @@ Route::get('/', [App\Http\Controllers\Front\FrontController::class, 'index']);
 Route::get('/front/contact', [App\Http\Controllers\Front\ContactController::class, 'index']);
 Route::get('/front/service', [App\Http\Controllers\Front\ServiceController::class, 'index']);
 Route::get('/front/course', [App\Http\Controllers\Front\CourseController::class, 'index']);
+Route::post('front/counselling/store', [App\Http\Controllers\Front\CounsellingController::class, 'store']);
+Route::post('front/getintouch/store', [App\Http\Controllers\Front\GetintouchController::class, 'store']);
+
+
 
 
 
@@ -61,6 +65,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
      Route::resource('/getintouch', App\Http\Controllers\Admin\Getintouch\GetintouchControlller::class,);
      Route::get('/delete/getintouch/{slug}', [App\Http\Controllers\Admin\Getintouch\GetintouchControlller::class, 'delete']);
      Route::get('/search/getintouch', [App\Http\Controllers\Admin\Getintouch\GetintouchControlller::class, 'search']);
+      // Orderablecourse
+      Route::resource('/orderablecourse', App\Http\Controllers\Admin\Orderablecourse\OrderablecourseControlller::class,);
+      Route::get('/delete/orderablecourse/{slug}', [App\Http\Controllers\Admin\Orderablecourse\OrderablecourseControlller::class, 'delete']);
+      Route::get('/search/orderablecourse', [App\Http\Controllers\Admin\Orderablecourse\OrderablecourseControlller::class, 'search']);
   // Bulk option 
   Route::post('/bulk/delete', [App\Http\Controllers\Admin\Bulk\BulkController::class, 'delete']);
 });
